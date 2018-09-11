@@ -1,0 +1,55 @@
+page-termsandconditions {
+    ion-content{
+        background-color: #191970 !important
+    }
+
+    ion-list{
+        background-color: #191970 !important
+    }
+
+    ion-label{
+        color: orange;
+        text-align: center;
+    }
+
+    ion-input{
+        background-color: white;
+        border-radius: 15px;
+        border: 1px orange solid;
+        color: black;
+        margin-top: 5px;
+        height: 40px;
+        input {
+            text-align: center;      
+        }
+    }
+    .loginbutton{
+        margin-top: 25px !important;
+        background-color: orange !important;
+    }
+    .linkbutton{
+        color: orange !important;
+    }
+    small{
+        color: orange;
+        text-decoration: underline;
+    }
+
+    .smalltext{
+        font-size: 10px;
+    }
+    
+    ion-navbar{
+        color: orange;
+        :button{
+            color: orange;
+            :span{
+                color: orange;
+            }
+        }
+    }
+    
+    ion-title {
+        color: orange;
+    }
+}
