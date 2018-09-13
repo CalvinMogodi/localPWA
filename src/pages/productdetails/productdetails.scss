@@ -1,0 +1,41 @@
+page-productdetails {
+.header{
+    color: #212121;
+}
+.price{
+    color: #D8703F;
+}
+.description {
+    margin: 2em 0;
+}
+.pull-left{
+    text-align: start
+}
+
+.pull-right{
+    text-align: end
+}
+.description{
+    font-size: 14px;
+    color: #999;
+}
+.header2{
+    margin-bottom: -13px;
+    font-weight: 400;
+}
+.header3{
+    margin-bottom: -5px;
+    font-weight: 400;
+}
+.add-to-cart{
+    color: #D8703F;
+    border: 1px solid;
+    font-size: 10px;
+ }
+
+ .colorCol{
+    display: inline-block;
+    margin-right: .5em;
+    font-weight: bolder;
+ }
+}

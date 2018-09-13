@@ -1,0 +1,57 @@
+<!--
+  Generated template for the ProductdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+         
+        <ion-slides style="height: 55%;" autoplay="3000" loop="true" speed="500" pager="true">
+            <ion-slide>
+                <img src="../../assets/imgs/cap.jpg"> 
+            </ion-slide>
+            <ion-slide>
+                <img src="../../assets/imgs/jeans.jpg"> 
+            </ion-slide>
+          </ion-slides>    
+        <ion-row>
+            <ion-col class="pull-left">
+                <h3 class="header">{{product.name}}</h3>
+            </ion-col>
+            <ion-col class="pull-right">
+                <h4 class="price">R {{product.price}}</h4>             
+            </ion-col>
+          </ion-row>
+          <div>
+              <h6 class="header2">Description</h6>
+              <p class="description">{{product.description}}</p>
+          </div>
+          <div>
+              <h6 class="header3">Colors:</h6>  
+              <ul>
+                <li class="colorCol" *ngFor='let color of colors; let i = index'>
+                  <span [ngStyle]="{'background-color': color, 'color': color}" >[[[]]]</span>
+                </li>
+              </ul>
+          </div>
+          <div>
+              <h6 class="header2">Sizes:</h6>
+              <ul>
+                  <li class="colorCol" *ngFor='let size of sizes; let i = index'>
+                      <span>{{size}}, </span>
+                  </li>
+              </ul>
+          </div>
+          <ion-fab right bottom>
+              <button ion-button outline class="add-to-cart">add to cart</button>
+            </ion-fab>
+</ion-content>

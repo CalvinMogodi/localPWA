@@ -9,6 +9,17 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { TermsandconditionsPage } from '../pages/termsandconditions/termsandconditions';
+import { CommonService } from '../shared/common';
+import { ProductdetailsPage } from '../pages/productdetails/productdetails';
+
+import { UserProvider } from '../providers/user';
+import { StoreProvider } from '../providers/store';
+import { ProductProvider } from '../providers/product';
+import { OrderProvider } from '../providers/order';
+
+import { HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,10 +32,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     RegisterPage,
     ForgotpasswordPage,
-    TermsandconditionsPage
+    TermsandconditionsPage,
+    ProductdetailsPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -35,11 +49,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     RegisterPage,
     ForgotpasswordPage,
-    TermsandconditionsPage
+    TermsandconditionsPage,
+    ProductdetailsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    CommonService,
+    UserProvider,
+    StoreProvider,
+    OrderProvider,
+    ProductProvider,
+    HttpClient,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
