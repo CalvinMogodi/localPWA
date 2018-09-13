@@ -1,4 +1,8 @@
 page-home {
+    ion-app{
+        font-family: 'Lato', sans-serif !important;
+    }
+
  .description{
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -22,11 +26,60 @@ page-home {
     font-size: 10px;
  }
 
+ .title{
+    text-align: center;
+    color: #222;
+    font-weight: 500;
+    height: 90px;
+    font-family: -webkit-body;
+ }
+
+ .title-span{
+    margin-top: -1px;
+    letter-spacing: 9px;
+    display: block;
+    font-size: .5em;
+    line-height: 0;
+    text-transform: uppercase;
+    color: #222222;
+    padding-left: .3em;
+ }
+
  .normal-price{
     margin-top: 15px !important;
     color: darkgray;
     text-decoration-line: line-through;
     font-size: 13px;
     margin-top: 15px !important
+ }
+
+ .cart{
+    float: right;
+    font-size: 13px;
+    color: #d8703f;
+    font-weight: 500;
+    margin-top: -5px;
+    font-family: -webkit-body;
+    padding-right: 15px;
+ }
+ .total
+ {
+    display: inline-block;
+    vertical-align: middle;
+ }
+
+ .cart-img{
+    margin-left: -15px;
+    vertical-align: middle;
+ }
+
+ .menu{
+    float: left;
+    margin-top: -55px;
+    color: gray;
+    background: transparent;
+    border: none;
+    width: 55px;
+    height: 55px;
  }
 }

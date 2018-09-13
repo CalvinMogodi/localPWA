@@ -1,10 +1,23 @@
 <ion-header>
-  <ion-navbar>
+  <div class="title">
+     
+    <h1>Buy Local</h1>
+    <p class="title-span">SHOP ANYWHERE</p>
+    <button class="menu" ion-button menuToggle clear>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <h3 class="cart">
+        <div class="total" style="margin: 15px !important">
+          <span>{{cartTotalPrice | currency:'R '}}</span> (<span> {{cartList.length}}</span> items)</div>
+        <img src="../assets/imgs/bag.png" alt="" class="cart-img"/>
+      </h3>
+  </div>
+  <!--<ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
-  </ion-navbar>
+  </ion-navbar>-->
 </ion-header>
 
 <ion-content>

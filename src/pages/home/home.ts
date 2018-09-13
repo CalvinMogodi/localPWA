@@ -12,6 +12,7 @@ export class HomePage {
   title = 'app';
   public products = [];  
   public cartList = [];
+  public cartTotalPrice = '0.00';
   public currentUser: any;
   constructor(public navCtrl: NavController, public productProvider: ProductProvider, public commonService: CommonService) {
     this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
