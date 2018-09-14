@@ -11,6 +11,9 @@ import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { TermsandconditionsPage } from '../pages/termsandconditions/termsandconditions';
 import { CommonService } from '../shared/common';
 import { ProductdetailsPage } from '../pages/productdetails/productdetails';
+import { ProductPage } from '../pages/product/product';
+import { StorePage } from '../pages/store/store';
+import { StoredetailsPage } from '../pages/storedetails/storedetails';
 
 import { UserProvider } from '../providers/user';
 import { StoreProvider } from '../providers/store';
@@ -33,7 +36,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RegisterPage,
     ForgotpasswordPage,
     TermsandconditionsPage,
-    ProductdetailsPage
+    ProductdetailsPage,
+    ProductPage,
+    StorePage,
+    StoredetailsPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RegisterPage,
     ForgotpasswordPage,
     TermsandconditionsPage,
-    ProductdetailsPage
+    ProductdetailsPage,
+    ProductPage,
+    StorePage,
+    StoredetailsPage
   ],
   providers: [
     StatusBar,

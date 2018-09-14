@@ -1,0 +1,44 @@
+<!--
+  Generated template for the StorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <div class="title">
+       
+      <h1>Buy Local</h1>
+      <p class="title-span">SHOP ANYWHERE</p>
+      <button class="menu" ion-button menuToggle clear>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      <h3 class="cart">
+          <div class="total" style="margin: 15px !important">
+            <span>{{cartTotalPrice | currency:'R '}}</span> (<span> {{cartList.length}}</span> items)</div>
+          <img src="../assets/imgs/bag.png" alt="" class="cart-img"/>
+        </h3>      
+    </div>
+    <h3 class="special">
+        My Stores
+    </h3>
+  </ion-header>
+
+
+<ion-content padding>
+    <ion-fab right top>
+        <button ion-fab (click)="addEditStore(new)">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-fab>
+
+    <ion-card (click)="addEditStore(details)">
+        <img src="../assets/imgs/store.jpg">      
+        <ion-item>
+          <ion-icon name="locate" item-start large></ion-icon>
+          <h2>Museum of Football</h2>
+          <p>11 N. Way St, Madison, WI 53703 11 N. Way St, Madison, WI 53703 11 N. Way St, Madison, WI 53703</p>
+          <p>11 N. Way St, Madison, WI 53703</p>
+          <p>0777777555</p>
+        </ion-item>     
+      </ion-card>
+</ion-content>
