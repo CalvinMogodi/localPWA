@@ -19,34 +19,45 @@
   </ion-header>
 
 <ion-content padding>
+    <ion-list transparent>
+        <ion-item style="background: transparent !important" no-lines>
+            <ion-label>Is this product on special?</ion-label>      
+            <ion-checkbox item-end color="secondary"></ion-checkbox>      
+          </ion-item>        
+    </ion-list>
     <ion-label stacked>Product Name</ion-label>
     <ion-input type="text"></ion-input>  
     <ion-label stacked>Price</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-list transparent>
-        <ion-item style="background: transparent !important">
-            <ion-label>Sam</ion-label>
-            <ion-toggle checked="false"></ion-toggle>
-          </ion-item>
-    </ion-list>
-    <ion-row>
-        <ion-col col-10>
-          <p class="linkbutton">Product is on special</p>
-          </ion-col>
-          <ion-col col-2>
-              <ion-toggle disabled checked="false"></ion-toggle>
-            </ion-col>
-        </ion-row>
+    <ion-input type="number"></ion-input>    
     <ion-label stacked>Special Price</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="Price"></ion-input>
     <ion-label stacked>Category</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label stacked>Size Category</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label stacked>Size</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label stacked>Available Colors</ion-label>
-    <ion-input type="text"></ion-input>    
+    <ion-list transparent>
+      <ion-item style="background: transparent !important" no-lines>
+        <ion-select>
+          <ion-option *ngFor="let category of productCategories" value="{{category.item_text}}">{{category.item_text}}</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item style="background: transparent !important" no-lines>
+        <ion-label stacked>Size Category</ion-label>
+        <ion-select >
+          <ion-option (click)='sizeCategoryChanged(sizeCategory)' *ngFor="let sizeCategory of sizeCategories" value="{{sizeCategory.item_text}}">{{sizeCategory.item_text}}</ion-option>
+        </ion-select>
+    </ion-item> 
+    <ion-item style="background: transparent !important" no-lines>
+        <ion-label stacked>Size</ion-label>
+        <ion-select>
+          <ion-option *ngFor="let size of sizes" value="{{size.item_text}}">{{size.item_text}}</ion-option>
+        </ion-select>
+    </ion-item> 
+    <ion-item style="background: transparent !important" no-lines>
+        <ion-label stacked>Available Colors</ion-label>
+        <ion-select>
+          <ion-option *ngFor="let color of colors" [ngStyle]="{'background-color': color.item_text, 'color': color.item_text}" value="{{color.item_text}}">{{color.item_text}} <label [ngStyle]="{'background-color': color.item_text, 'color': color.item_text}" >[[[]]]</label></ion-option>
+        </ion-select>
+    </ion-item>         
+  </ion-list>  
     <ion-label stacked>Descrition</ion-label>
     <ion-textarea rows="6"></ion-textarea>  
+    <button class="loginbutton" (click)="submit()" ion-button round full>Submit</button>
 </ion-content>

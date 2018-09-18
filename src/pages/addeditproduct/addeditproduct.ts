@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController  } from 'ionic-angular';
+import { CommonService } from '../../shared/common';
 
 /**
  * Generated class for the AddeditproductPage page.
@@ -15,7 +16,11 @@ import { IonicPage, NavController, NavParams, ViewController  } from 'ionic-angu
 })
 export class AddeditproductPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  public productCategories = this.commonService.productCategories;
+  public sizeCategories = this.commonService.sizeCategories;
+  public sizes = [];
+  public colors = this.commonService.colors;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,public commonService : CommonService) {
   }
 
   ionViewDidLoad() {
@@ -23,9 +28,25 @@ export class AddeditproductPage {
   }
 
   dismiss() {
-
     this.viewCtrl.dismiss();
+  }
 
+  sizeCategoryChanged(text){
+
+    switch(text){
+      case 'General Sizes':
+        this.sizes = this.commonService.generalSizes;
+        break
+      case 'Shoes Sizes':
+        this.sizes = this.commonService.shoesSizes;
+        break
+      case 'Pants Sizes':
+        this.sizes = this.commonService.pantsSizes;
+        break
+      case 'Tops Sizes':
+        this.sizes = this.commonService.topsSizes;
+        break
+    }
   }
 
 }

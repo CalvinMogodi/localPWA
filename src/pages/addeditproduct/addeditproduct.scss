@@ -50,6 +50,20 @@ page-addeditproduct {
         }
     }
 
+    ion-select{
+        background-color: white;
+        border-radius: 15px;
+        border: 1px orange solid;
+        color: black;
+        margin-top: 5px;
+        height: 40px;
+        input {
+            text-align: center;      
+        }
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
     ion-textarea{
         background-color: white;
         border-radius: 15px;
