@@ -8,9 +8,21 @@ page-addeditproduct {
             }
         }
     }
+
+    ion-toggle{
+        height: 15px  !important;
+        width: 35px !important;
+        :div{
+            height: 15px  !important;
+            width: 35px !important;
+        }
+    }
     
-    ion-title {
+    ion-title{
         color: orange;
+        :div{
+            color: orange;
+        }
         font-family: -webkit-body;
     }
     ion-content{
