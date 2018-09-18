@@ -4,15 +4,41 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>storedetails</ion-title>
+<ion-header transparent>
+  <ion-navbar transparent>
+    <ion-title>{{heading}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding>  
+  <ion-label stacked>Store Name</ion-label>
+  <ion-input type="text"></ion-input>  
+  <ion-label stacked>Cell/Tell Phone number</ion-label>
+  <ion-input type="text"></ion-input>
+  <ion-label stacked>Address</ion-label>
+  <ion-input type="text"></ion-input>
+  <ion-label stacked>Descrition</ion-label>
+  <ion-textarea rows="6"></ion-textarea>  
+  <ion-row>
+      <ion-col col-6>
+        <p class="linkbutton">Add product for this store</p>
+        </ion-col>
+        <ion-col col-6>
+            <button class="secondbutton" (click)="goToProduct(null, 'New Product')" ion-button round >Add Product</button>
+          </ion-col>
+      </ion-row>
+    <ion-list transparent>
+        <ion-item style="background: transparent !important">
+            <ion-thumbnail item-start>
+              <img src="../assets/imgs/store.jpg">
+            </ion-thumbnail>
+            <h2 class="text-left">My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988 Hayao Miyazaki • 1988 Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-end (click)="goToProduct(null, 'Edit Product')">View</button>
+          </ion-item>        
+      </ion-list>
+  <button class="loginbutton" (click)="submit()" ion-button round full>Submit</button>
+  <p *ngIf="showStoreError" style="color: red;font-size: small;text-align:center"> {{storeError}} </p>
 </ion-content>

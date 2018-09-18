@@ -26,12 +26,12 @@
 
 <ion-content padding>
     <ion-fab right top>
-        <button ion-fab (click)="addEditStore(new)">
+        <button ion-fab (click)="addEditStore(null , 'New Store')">
           <ion-icon name="add"></ion-icon>
         </button>
       </ion-fab>
 
-    <ion-card (click)="addEditStore(details)">
+    <ion-card (click)="addEditStore(store, 'Edit Store')">
         <img src="../assets/imgs/store.jpg">      
         <ion-item>
           <ion-icon name="locate" item-start large></ion-icon>

@@ -24,8 +24,8 @@ export class StorePage {
     console.log('ionViewDidLoad StorePage');
   }
 
-  addEditStore(){
-    this.navCtrl.push(StoredetailsPage);
+  addEditStore(store, action){
+    this.navCtrl.push(StoredetailsPage, {store: store, action: action});
   }
 
 }
