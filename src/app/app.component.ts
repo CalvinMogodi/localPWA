@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { BasketPage } from '../pages/basket/basket';
+import { MyordersPage } from '../pages/myorders/myorders';
 import { LoginPage } from '../pages/login/login';
 import { StorePage } from '../pages/store/store';
 
@@ -12,12 +14,11 @@ import { StorePage } from '../pages/store/store';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
+  public userDisplayName = "CM";
   @ViewChild(Nav) nav: Nav;
-
-  rootPage: any = StorePage;
-
-  pages: Array<{title: string, component: any}>;
-
+  rootPage: any = HomePage;
+  pages: Array<{title: string, component: any}>;  
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
@@ -41,6 +42,6 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.setRoot(page);
   }
 }

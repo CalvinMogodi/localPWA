@@ -15,6 +15,9 @@ import { ProductPage } from '../pages/product/product';
 import { StorePage } from '../pages/store/store';
 import { StoredetailsPage } from '../pages/storedetails/storedetails';
 import { AddeditproductPage } from '../pages/addeditproduct/addeditproduct';
+import { BasketPage } from '../pages/basket/basket';
+import { MyordersPage } from '../pages/myorders/myorders';
+import { OrderPage } from '../pages/order/order';
 
 import { UserProvider } from '../providers/user';
 import { StoreProvider } from '../providers/store';
@@ -24,6 +27,7 @@ import { OrderProvider } from '../providers/order';
 import { HttpClient } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,13 +45,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProductPage,
     StorePage,
     StoredetailsPage,
-    AddeditproductPage
+    AddeditproductPage,
+    BasketPage,
+    MyordersPage,
+    OrderPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -62,7 +70,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ProductPage,
     StorePage,
     StoredetailsPage,
-    AddeditproductPage
+    AddeditproductPage,
+    BasketPage,
+    MyordersPage,
+    OrderPage
   ],
   providers: [
     StatusBar,

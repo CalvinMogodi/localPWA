@@ -20,6 +20,7 @@ export class AddeditproductPage {
   public sizeCategories = this.commonService.sizeCategories;
   public sizes = [];
   public colors = this.commonService.colors;
+  public imasrc = "../assets/imgs/store.jpg";
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,public commonService : CommonService) {
   }
 
@@ -29,6 +30,10 @@ export class AddeditproductPage {
 
   dismiss() {
     this.viewCtrl.dismiss();
+  }
+
+  setImageToview(imasrc){
+    this.imasrc = imasrc;
   }
 
   sizeCategoryChanged(text){

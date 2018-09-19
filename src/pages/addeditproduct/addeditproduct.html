@@ -19,6 +19,34 @@
   </ion-header>
 
 <ion-content padding>
+    <ion-row center>
+        <ion-col col-12 text-center>
+            <img height="250" width="350px" class="image-border" src="{{imasrc}}" imageViewer >
+            <button class="upload-image" (click)="submit()" ion-button round full>Submit</button>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-3>
+            <ion-thumbnail item-start>
+                <img height="65" (click)="setImageToview('../assets/imgs/store.jpg')" width="80" src="../assets/imgs/store.jpg">
+              </ion-thumbnail>
+        </ion-col>
+        <ion-col col-3>
+            <ion-thumbnail item-start>
+                <img height="65" width="80" (click)="setImageToview('../assets/imgs/cap.jpg')" src="../assets/imgs/cap.jpg">
+              </ion-thumbnail>
+        </ion-col>
+        <ion-col col-3>
+            <ion-thumbnail item-start>
+                <img height="65" width="80" (click)="setImageToview('../assets/imgs/jeans.jpg')" src="../assets/imgs/jeans.jpg">
+              </ion-thumbnail>
+        </ion-col>
+        <ion-col col-3>
+            <ion-thumbnail item-start>
+                <img height="65" width="80" (click)="setImageToview('../assets/imgs/kuga engine 3.jpg')" src="../assets/imgs/kuga engine 3.jpg">
+              </ion-thumbnail>
+        </ion-col>
+    </ion-row>
     <ion-list transparent>
         <ion-item style="background: transparent !important" no-lines>
             <ion-label>Is this product on special?</ion-label>      

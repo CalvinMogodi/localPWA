@@ -1,15 +1,16 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+  <ion-content class="background">
+    <div class="header">
+        <label class="displayName">{{userDisplayName}}</label>
+        <p class="orange">Calvin Mogodi</p>
+    </div>
+    
+    <ion-list transparent no-lines>
+        <label menuClose ion-item (click)="openPage(HomePage)" class="menu-item">Home</label>
+        <hr class="divider">
+        <label menuClose ion-item (click)="openPage(BasketPage)" class="menu-item">Basket</label>
+        <hr class="divider">
+        <label menuClose ion-item (click)="openPage(MyordersPage)" class="menu-item">My Orders</label>
     </ion-list>
   </ion-content>
 

@@ -1,9 +1,9 @@
 page-addeditproduct {
-    ion-navbar{
+    ion-header{
         color: orange;
-        :button{
+        :ion-toolbar{
             color: orange;
-            :span{
+            :ion-title{
                 color: orange;
             }
         }
@@ -78,6 +78,10 @@ page-addeditproduct {
         margin-top: 25px !important;
         background-color: orange !important;
     }
+
+    .background-orange{
+        background-color: orange !important;
+    }
     .linkbutton{
         color: orange !important;
     }
@@ -94,11 +98,26 @@ page-addeditproduct {
         text-align: left;
     }
 
+    .text-center{
+        text-align: center !important;
+    }
+
     .secondbutton{
         font-size: 12px;
         float: right;
         height: 25px;
         background-color: darkorange;
         margin-top: 10px !important;
+    }
+
+    .image-border{
+        border: 2px orange solid;
+    }
+
+    .upload-image{
+        border-radius: 0px 0px 10px 10px;
+        height: 30px;
+        margin-top: -4px;
+        background-color: orange !important;
     }
 }
