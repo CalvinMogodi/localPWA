@@ -18,6 +18,7 @@ import { AddeditproductPage } from '../pages/addeditproduct/addeditproduct';
 import { BasketPage } from '../pages/basket/basket';
 import { MyordersPage } from '../pages/myorders/myorders';
 import { OrderPage } from '../pages/order/order';
+import { PaymentPage } from '../pages/payment/payment';
 
 import { UserProvider } from '../providers/user';
 import { StoreProvider } from '../providers/store';
@@ -46,9 +47,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StorePage,
     StoredetailsPage,
     AddeditproductPage,
+    OrderPage,
     BasketPage,
-    MyordersPage,
-    OrderPage
+    PaymentPage,
+    MyordersPage
   ],
   imports: [
     BrowserModule,
@@ -71,9 +73,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StorePage,
     StoredetailsPage,
     AddeditproductPage,
+    OrderPage,
     BasketPage,
-    MyordersPage,
-    OrderPage
+    PaymentPage,
+    MyordersPage
   ],
   providers: [
     StatusBar,

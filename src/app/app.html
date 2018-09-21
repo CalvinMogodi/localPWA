@@ -1,6 +1,6 @@
 <ion-menu [content]="content">
   <ion-content class="background">
-    <div class="header">
+    <div>
         <label class="displayName">{{userDisplayName}}</label>
         <p class="orange">Calvin Mogodi</p>
     </div>
@@ -8,7 +8,7 @@
     <ion-list transparent no-lines>
         <label menuClose ion-item (click)="openPage('HomePage')" class="menu-item">Home</label>
         <hr class="divider">
-        <label menuClose ion-item (click)="openPage('BasketPage')" class="menu-item">Basket</label>
+        <label menuClose ion-item (click)="openPage('BasketPage')" class="menu-item">Shopping Cart</label>
         <hr class="divider">
         <label menuClose ion-item (click)="openPage('MyordersPage')" class="menu-item">My Orders</label>
     </ion-list>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PaymentPage } from '../payment/payment';
 
 /**
  * Generated class for the BasketPage page.
@@ -20,6 +21,10 @@ export class BasketPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BasketPage');
+  }
+
+  checkout(){
+    this.navCtrl.push(PaymentPage);
   }
 
 }
